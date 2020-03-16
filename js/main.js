@@ -57,3 +57,18 @@ $(document).ready(function() {
 
 	});    
 });
+
+
+function openMeal(evt, mealName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active-tab", "");
+    }
+    document.getElementById(mealName).style.display = "flex";
+    evt.currentTarget.className += " active-tab";
+  }

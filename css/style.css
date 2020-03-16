@@ -207,7 +207,7 @@ a.navigation-link.hide-item{
     font-weight: 400;
 }
 
-.text-over-image .text button{
+.text-over-image .text button,.meal-name-button{
     color: #fff;
     background-color: #f3a742;
     margin-top: 30px;
@@ -220,7 +220,7 @@ a.navigation-link.hide-item{
     font-weight: 700;
 }
 
-.text-over-image .text button:hover{
+.text-over-image .text button:hover,.meal-name-button:hover{
     background-color: #f17a00;
     -webkit-transition: .4s ease;
     transition: .4s ease;
@@ -252,6 +252,7 @@ a.navigation-link.hide-item{
 
 .center-titles{
     text-align: center;
+    margin: 50px 0;
 }
 
 .center-titles h1{
@@ -267,6 +268,94 @@ a.navigation-link.hide-item{
     color: #9297b0;
     font-size: 18px;
     font-weight: 400;
+}
+
+.tab {
+    overflow: hidden;
+    text-align: center;
+}
+
+.tab button {
+    border: none;
+    background-color: inherit;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 28px;
+    font-family: Lora-Bold;
+    font-weight: 700;
+    color: #9297b0;
+    border-bottom: 3px solid #eef0f6;
+}
+
+.tab button:hover {
+    color: #002336;
+}
+
+.tab button.active-tab {
+    border-bottom-color: #3f9b7a;
+}
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    margin: 60px 0;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+    position: relative;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.tabcontent.active-tab{
+    display: flex;
+}
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+img.responsive-image{
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.meal-name-left{
+    flex: 1;
+    padding-right: 20px;
+}
+
+.meal-name-right{
+    flex: 1;
+    text-align: center;
+}
+
+.meal-name-title{
+    font-size: 46px;
+    line-height: 52px;
+    color: #3f9b7a;
+    font-family: Lora-Bold;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.meal-name-paragraph{
+    font-size: 18px;
+    line-height: 28px;
+    color: #002336;
+    font-weight: 400;
+    margin-bottom: 20px;
 }
 
 
@@ -790,6 +879,7 @@ address a{
     color: #ffffff;
     font-weight: 700;
     margin-bottom: 15px;
+    font-family: Lora-Bold;
 }
 
 
@@ -837,11 +927,7 @@ address a{
     }
 
     .text-over-image .text h1{
-        font-size: 45px;
-    }
-    
-    .text-over-image .text p{
-        font-size: 19px;
+        font-size: 58px;
     }
 
     .responive-image{
@@ -856,14 +942,74 @@ address a{
         width: 100%;
     }
 
-    .footer-paragraph{
-        width: unset;
-    }
-
     .container-copyright-footer{
         padding: 5px 10px;
     }
+    
+    .center-titles h1{
+        font-size: 30px;
+    }
 
+    .center-titles h5{
+        font-size: 16px;
+    }
+
+    .tab button{
+        font-size: 26px;
+    }
+    
+    .meal-name-title{
+        font-size: 38px;
+    }
+
+    .meal-name-paragraph{
+        font-size: 16px;
+    }
+
+    .title-user h1{
+        font-size: 30px;
+    }
+
+    .text-near-image p strong{
+        font-size: 17px;
+    }
+
+    .text-near-image p{
+        font-size: 8px;
+    }
+
+    .right-users{
+        font-size: 16px;
+    }
+
+    .title-recipes a{
+        font-size: 12px;
+    }
+
+    .title-recipes h1{
+        font-size: 30px;
+    }
+
+    .popular-offer-content h1{
+        font-size: 32px;
+    }
+
+    .footer-paragraph{
+        width: unset;
+        font-size: 14px;
+    }
+
+    .footer-popular-recipes,.footer-usefull-links{
+        font-size: 18px;
+    }
+
+    .footer-popular-recipes-list, .footer-usefull-links-list{
+        font-size: 14px;
+    }
+
+    .copyright-footer{
+        font-size: 12px;
+    }
 }
 
 @media (max-width: 767px){
@@ -888,7 +1034,7 @@ address a{
     }
 
     .text-over-image .text h1{
-        font-size: 30px;
+        font-size: 42px;
     }
     
     .text-over-image .text p{
@@ -899,10 +1045,48 @@ address a{
         width: 60%;
     }
 
+    .meal-name-right{
+        display: none;
+    }
+
     .text-over-image .text button{
-        font-size: 15px;
+        font-size: 14px;
         padding: 10px 15px;
         margin-top: 40px;
+    }
+
+    .center-titles h1{
+        font-size: 22px;
+        line-height: 32px;
+        margin-bottom:15px;
+    }
+
+    .center-titles h5{
+        font-size: 16px;
+        line-height: 21px;
+    }
+
+    .tab button{
+        font-size: 16px;
+        line-height: 42px;
+    }
+
+    .meal-name-left{
+        text-align: center;
+    }
+
+    .meal-name-paragraph{
+        text-align: left;
+    }
+
+    .meal-name-title{
+        font-size: 22px;
+        line-height: 28px;
+        text-align: center;
+    }
+
+    .meal-name-title br{
+        display: none;
     }
 
     .user-sections{
@@ -933,10 +1117,57 @@ address a{
         transform: translate(-115%, -50%);
     }
 
+    .title-user h1{
+        font-size: 22px;
+        line-height: 32px;
+    }
+
+    .right-users{
+        font-size: 14px;
+        line-height: 23px;
+    }
+
     .title-recipes{
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
+    }
+
+    .title-recipes h1{
+        font-size: 22px;
+    }
+
+    .title-recipes a{
+        display: none;
+    }
+
+    .overlay-content p{
+        font-size: 10px;
+    }
+
+    .overlay-content h3{
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .above p{
+        font-size: 10px;
+    }
+
+    .above h3{
+        font-size: 16px;
+    }
+
+    .top-banner span{
+        font-size: 8px;
+    }
+
+    .ingridients{
+        font-size: 16px;
+    }
+
+    .popular-offer-sections span{
+        font-size: 14px;
     }
 
     .container-footer{
@@ -946,6 +1177,10 @@ address a{
     }
 
     .footer-sections{
+        text-align: center;
+    }
+
+    .copyright-footer{
         text-align: center;
     }
 }
